@@ -20,11 +20,11 @@ function DaysTable() {
   return (
     <div className="grid grid-rows-7 grid-flow-col gap-3">
       {datesFromYearBegging.map(date => (
-        <HabitDay key={date.toDateString()} />
+        <HabitDay amount={100} completed={0} key={date.toDateString()} />
       ))}
       {amountOfDaysToFill > 0 &&
         Array.from({ length: amountOfDaysToFill }).map((_, i) => (
-          <HabitDay isPlaceholder key={i} />
+          <HabitDay key={i} />
         ))}
     </div>
   );
